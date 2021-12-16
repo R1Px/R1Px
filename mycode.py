@@ -29,7 +29,7 @@ HOŞGELDIN !!!
 
 1:  Port Scan
 2:  Web Extension Browsing
-3:  Wordpress Scan
+3:  Worpress Scan
 4:  MD5 (hash)
 5:  SHA2-256 (hash)
 6:  FREE PROXY 
@@ -37,6 +37,7 @@ HOŞGELDIN !!!
 8:  SQL Scan
 9:  FTP
 10: Telnet
+11: Download WebShell
 """)
 
 islem = input(BOLD+MAVİ+"R1Px~#  ")
@@ -105,6 +106,10 @@ elif(islem == "10"):
 	print("IP exp: 127.0.0.1")
 	tel = input("Site: ")
 	os.system("telnet" + tel)
+
+elif(islem == "11"):
+	print("WebShell Installing")
+	os.system("git clone https://github.com/tennc/webshell")
 
 else:
 	("ERROR !!!")
