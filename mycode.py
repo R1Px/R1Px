@@ -49,6 +49,7 @@ HOŞGELDIN !!!
 9:  FTP
 10: Telnet
 11: Download WebShell
+12: Web Site Copy
 """)
 
 islem = input(BOLD+MAVİ+"R1Px~#  ")
@@ -121,6 +122,11 @@ elif(islem == "10"):
 elif(islem == "11"):
 	print("WebShell Installing")
 	os.system("git clone https://github.com/tennc/webshell")
+
+elif(islem == "12"):
+	print("https://site.com/ or http://")
+	wget = input("Site: ")
+	os.system("wget " + "-r -p -U Mozilla --wait=10 --limit-rate=35K " + wget)
 
 else:
 	("ERROR !!!")
