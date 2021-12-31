@@ -128,5 +128,15 @@ elif(islem == "12"):
 	wget = input("Site: ")
 	os.system("wget " + "-r -p -U Mozilla --wait=10 --limit-rate=35K " + wget)
 
+elif(islem == "13"):
+        print("*** Enter To Site = http://site.com/index.php?id=  delete the id=HERE !!! ***")
+        commix = input("Site: ")
+        os.system("commix --url " + commix + "INJECT_HERE --random-agent --level=3 --tamper=base64encode,backslashes")
+
+elif(islem == "14"):
+        print("*** NIKTO ***")
+        nikto = input("Site: ")
+        os.system("nikto -h " + nikto + " -Tuning 4")
+
 else:
-	("ERROR !!!")
+        ("ERROR !!!")
