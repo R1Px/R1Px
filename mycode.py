@@ -35,9 +35,7 @@ RR:::::R     R:::::R 111::::::111 PP::::::PP              x:::::xx:::::x
 R::::::R     R:::::R 1::::::::::1 P::::::::P             x:::::x  x:::::x  
 R::::::R     R:::::R 1::::::::::1 P::::::::P            x:::::x    x:::::x 
 RRRRRRRR     RRRRRRR 111111111111 PPPPPPPPPP           xxxxxxx      xxxxxxx                         
-
 *** HOŞGELDIN !!! ***
-
 1:  *** Port Scan                ***
 2:  *** Web Extension Browsing   ***
 3:  *** Worpress Scan            ***
@@ -141,5 +139,4 @@ elif(islem == "14"):
         os.system("nikto -h " + nikto + " -Tuning 4")
 
 else:
-        ("ERROR !!!")
-                     
+        print("ERROR !!!")
